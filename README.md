@@ -20,13 +20,15 @@ They compose without overlapping, and each is incomplete on its own. A hardened 
 
 I take automation that a business already depends on and make it behave like a real system — one that fails loudly and recoverably instead of silently dropping work.
 
+I also trade as **The Certainty Engineer**.
+
 Engagements usually take one of three shapes:
 
 - **A fixed-scope audit** of an existing deployment against named failure modes, with findings you can re-run yourself.
 - **A hardening pass** that closes what the audit finds.
 - **A migration** of live automations onto a hardened stack — parallel run, ordered credential repoint, rollback as a repoint rather than a rebuild. Never a cold cutover.
 
-Findings come back as evidence, in the same form as the tests in these repositories. Where the value lives in the work rather than the artefact, I publish the artefact generously: the assertions are public, the automation that remediates what they find is the engagement. Detection is not remediation.
+Findings come back as evidence, in the same form as the tests in these repositories. Where the value lives in the work rather than the artefact, I publish the artefact generously: the assertions are published, the automation that remediates what they find is the engagement. Detection is not remediation.
 
 ## Getting in touch
 
