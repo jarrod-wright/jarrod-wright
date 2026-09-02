@@ -28,7 +28,7 @@ Engagements usually take one of three shapes:
 - **A hardening pass** that closes what the audit finds.
 - **A migration** of live automations onto a hardened stack — parallel run, ordered credential repoint, rollback as a repoint rather than a rebuild. Never a cold cutover.
 
-Findings come back as evidence, in the same form as the tests in these repositories. Where the value lives in the work rather than the artefact, I publish the artefact generously: the assertions are published, the automation that remediates what they find is the engagement. Detection is not remediation.
+Findings come back as evidence, in the same form as the tests in these repositories. Where the value lives in the work rather than the artefact, I publish the artefact generously: the assertions are the public part, and the automation that remediates what they find is the engagement. Detection is not remediation.
 
 ## Getting in touch
 
