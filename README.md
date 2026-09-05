@@ -2,7 +2,7 @@
 
 I work on the reliability of self-hosted automation infrastructure — specifically n8n, across the three planes that have to be secured separately: the workflows, the container stack they run on, and the host underneath.
 
-These repositories are the reference implementations I work from. They are written to be read: every non-obvious default has its reasoning next to it, and the claims are ones you can check against the shipped configuration rather than take on trust.
+These repositories are the reference implementations I work from. They are written to be read: every non-obvious default has its reasoning next to it, and every claim ships with an assertion you can execute yourself — here, or against your own deployment.
 
 ## The three planes
 
@@ -10,11 +10,11 @@ These repositories are the reference implementations I work from. They are writt
 |---|---|---|
 | **Workflow** | Authenticated ingress, idempotency, bounded retries, dead-lettering, model-output validation, liveness | [n8n-workflow-hardening](https://github.com/jarrod-wright/n8n-workflow-hardening) |
 | **Stack and container** | Compose topology, TLS termination, queue mode, secret delivery, capability drops, database privileges | [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference) |
-| **Host and OS** | CIS Ubuntu 24.04 Level 1, Server profile: SSH policy, kernel and sysctl parameters, host firewall, auditd, patch posture | [vps-hardening-reference](https://github.com/jarrod-wright/vps-hardening-reference) — in development |
+| **Host and OS** | CIS Ubuntu 24.04 Level 1, Server profile: SSH policy, kernel and sysctl parameters, host firewall, auditd, patch posture | [vps-hardening-reference](https://github.com/jarrod-wright/vps-hardening-reference) — scope and status published, assertion suite in development |
 
 They compose without overlapping, and each is incomplete on its own. A hardened stack on an unhardened host is still an unhardened host.
 
-**Start with [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference).** It carries the threat model and the fastest way to check whether I am telling the truth: one command that counts how many services the stack actually exposes.
+**Start with [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference).** It carries the threat model, and a specimen of what the work produces: one command that counts how many services the stack actually exposes — a check you keep, re-run in CI, and hand to your own auditor.
 
 ## What I do
 
