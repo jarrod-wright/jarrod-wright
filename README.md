@@ -1,39 +1,32 @@
 # Jarrod Wright
 
-I work on the reliability of self-hosted automation infrastructure — specifically n8n, across the three planes that have to be secured separately: the workflows, the container stack they run on, and the host underneath.
+I keep production n8n workflows and AI agents working under real load, for businesses that depend on them. I trade as The Certainty Engineer. The repositories below carry their reasoning next to their defaults, and their claims ship with tests you can run.
 
-These repositories are the reference implementations I work from. They are written to be read: every non-obvious default has its reasoning next to it, and every claim ships with an assertion you can execute yourself — here, or against your own deployment.
+## How an engagement runs
 
-## The three planes
+Every engagement follows one sequence. Initial triage is free: you tell me what your stack/deployment is, what's breaking, and I tell you if I'm the right person to fix it.
 
-| Plane | What it covers | Repository |
+Then comes a paid, written diagnosis, where every root cause is backed by evidence and the report names causes, never people.
+
+No repair starts before that. It's proven against a test that reproduces the failure, and handed back with a runbook so your team can operate it without me. While I work you get a daily change log, and every message says when you'll hear from me next.
+
+You never get an invoice for work you did not approve in writing. My method follows Google SRE incident practice, ITIL 4 change control and NIST SP 800-61r3 for security incidents.
+
+## Start where you are
+
+| If this is you | Start here | What it proves |
 |---|---|---|
-| **Workflow** | Authenticated ingress, idempotency, bounded retries, dead-lettering, model-output validation, liveness | [n8n-workflow-hardening](https://github.com/jarrod-wright/n8n-workflow-hardening) |
-| **Stack and container** | Compose topology, TLS termination, queue mode, secret delivery, capability drops, database privileges | [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference) |
-| **Host and OS** | CIS Ubuntu 24.04 Level 1, Server profile: SSH policy, kernel and sysctl parameters, host firewall, auditd, patch posture | [vps-hardening-reference](https://github.com/jarrod-wright/vps-hardening-reference) — scope and status published, assertion suite in development |
+| A production workflow broke and nobody can say why | [n8n-workflow-hardening](https://github.com/jarrod-wright/n8n-workflow-hardening) | Five named failures, each one caused on purpose by a test in the repository |
+| Your AI agent is failing quietly | [n8n-agent-assertions](https://github.com/jarrod-wright/n8n-agent-assertions) | Four read-only checks, each run with a passing and a failing case |
+| You self-host n8n and want the stack hardened | [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference) | One published port, images pinned to digests, controls mapped to NIST SP 800-190 |
+| You want to see how I diagnose before you buy | [the casebook](https://github.com/jarrod-wright/casebook) | A worked diagnosis example, labelled synthetic, and dated reviews where every fact links to its source |
 
-They compose without overlapping, and each is incomplete on its own. A hardened stack on an unhardened host is still an unhardened host.
-
-**Start with [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference).** It carries the threat model, and a specimen of what the work produces: one command that counts how many services the stack actually exposes — a check you keep, re-run in CI, and hand to your own auditor.
-
-## What I do
-
-I take automation that a business already depends on and make it behave like a real system — one that fails loudly and recoverably instead of silently dropping work.
-
-I also trade as **The Certainty Engineer**.
-
-Engagements usually take one of three shapes:
-
-- **A fixed-scope audit** of an existing deployment against named failure modes, with findings you can re-run yourself.
-- **A hardening pass** that closes what the audit finds.
-- **A migration** of live automations onto a hardened stack — parallel run, ordered credential repoint, rollback as a repoint rather than a rebuild. Never a cold cutover.
-
-Findings come back as evidence, in the same form as the tests in these repositories. Where the value lives in the work rather than the artefact, I publish the artefact generously: the assertions are the public part, and the automation that remediates what they find is the engagement. Detection is not remediation.
+Each repository states its limits plainly, including what it does not cover. The casebook shows the method on real n8n advisories. The current review covers the September and October 2026 advisory wave, with a version check to run against your own instance.
 
 ## Getting in touch
 
-**Email jarr.wright@gmail.com.** Tell me what you are running and what is breaking — the stack, roughly how much depends on it, and what went wrong most recently. I will tell you straight whether I can help and what it would take.
+**Email jarr.wright@gmail.com.** Tell me what you are running and what is breaking. I reply within 24 hours, and I'll tell you straight whether I can help and what the first step costs.
 
 If you would rather ask in public first, open an issue on whichever repository you are reading. It keeps the question next to the code it is about.
 
-*If you found me through a freelancing platform, please keep the conversation there until a contract is in place.*
+*If you found me through a freelancing platform, please keep the conversation there.*
