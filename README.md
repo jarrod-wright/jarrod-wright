@@ -1,6 +1,6 @@
 # Jarrod Wright
 
-I keep production n8n workflows and AI agents working under real load, for businesses that depend on them. I trade as The Certainty Engineer. The repositories below carry their reasoning next to their defaults, and their claims ship with tests you can run.
+Your inbound leads cool while reps work deals, and nobody owns the response clock. These repositories apply tests, evidence, and runbooks to the systems that route your demo requests. I work as The Certainty Engineer, putting inspectable proof behind the controls your pipeline needs.
 
 ## How an engagement runs
 
@@ -20,6 +20,8 @@ You never get an invoice for work you did not approve in writing. My method foll
 | Your AI agent is failing quietly | [n8n-agent-assertions](https://github.com/jarrod-wright/n8n-agent-assertions) | Four read-only checks, each run with a passing and a failing case |
 | You self-host n8n and want the stack hardened | [n8n-hardened-reference](https://github.com/jarrod-wright/n8n-hardened-reference) | One published port, images pinned to digests, controls mapped to NIST SP 800-190 |
 | You want to see how I diagnose before you buy | [the casebook](https://github.com/jarrod-wright/casebook) | A worked diagnosis example, labelled synthetic, and dated reviews where every fact links to its source |
+
+Tests cause five named production failures on purpose, so your request workflow loses fewer paid leads. Four read-only checks run passing and failing cases to catch quiet failures before your demo requests go unanswered. One published port, pinned image digests, and NIST SP 800-190 controls give your lead pipeline uptime and containment. Dated production reviews and one worked example diagnosis let you inspect how I think before any contract.
 
 Each repository states its limits plainly, including what it does not cover. The casebook shows the method on real n8n advisories. The current review covers the September and October 2026 advisory wave, with a version check to run against your own instance.
 
